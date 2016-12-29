@@ -21,7 +21,7 @@ def html(html_body):
     </html>""" % (html_body)
     return html_header
 
-def h_content(desc, t1, t2):
+def h_content(desc, p1, p2, p3, p4):
     layout = """
     <div class="container">
         <div class="row clearfix">
@@ -42,9 +42,20 @@ def h_content(desc, t1, t2):
     		</div>
     	</div>
     	
-
+        <div class="row clearfix">
+    		<div class="col-md-12 column">
+    		%s
+    		</div>
+    	</div>
+    	
+        <div class="row clearfix">
+    		<div class="col-md-12 column">
+    		%s
+    		</div>
+    	</div>
+    	
 	</div>
-    """ % (desc, t1, t2)
+    """ % (desc, p1, p2, p3, p4)
     
     return layout
 
@@ -283,20 +294,20 @@ def index_write():
     f = open('/srv/www/idehe.com/store2/index.html','w')
     
     file_etf = "ETF_data.csv"
-    file_path = '/srv/www/idehe.com/store2/stock_data/'
+    file_rest = "rest_data.csv"
+    file_path = '/srv/www/idehe.com/store2/data/'
     
     etf_data = sort_range(file_etf, file_path)
-    table_e = table(etf_data, '主要市场ETF', '1年价格排序/')
-    table_set = my_table(file_etf, file_path, '数据处理ETF', '数据处理/下跌1%上涨2%进行仓位操作')
-    #print table_etable(etf_data, '主要市场ETF', '1年价格排序/')
-    #table_t = table(topic_data, '主题ETF', '1年价格排序/')
-    #table_fa = table(f5_funda, '分级A', "选取隐含收益5%以上，成交量100W以上，1年价格排序/52K不准确：环保，军工股A，网金融/X=分级A合并溢价, 正的高价，深圳区申购")
-    #table_zj = table(zhaij_data, '场内债基', '按照折溢价排序/主要看折溢价，成交量/年化折价')
-    #table_un = table(uncategory_data, '其他未分类', 'X=封基年化折价')
-
+    rest_data = sort_range(file_rest, file_path)
+    
+    table_e = table(etf_data, '主要ETF', '1年价格排序/')
+    table_r = table(rest_data, '其他', '1年价格排序/')
+    
+    table_set_e = my_table(file_etf, file_path, '主要ETF', '数据处理/下跌1%上涨2%进行仓位操作')
+    table_set_r = my_table(file_rest, file_path, '其他', '数据处理/下跌1%上涨2%进行仓位操作')
     
     desc = page_desciption()
-    content = h_content(desc, table_e, table_set)
+    content = h_content(desc, table_e, table_r, table_set_e, table_set_r)
     
     h = html(content)
     
