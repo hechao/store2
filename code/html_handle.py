@@ -21,7 +21,7 @@ def html(html_body):
     </html>""" % (html_body)
     return html_header
 
-def h_content(desc, p1, p2, p3, p4):
+def h_content(desc, p1, p2, p3, p4, p5, p6):
     layout = """
     <div class="container">
         <div class="row clearfix">
@@ -53,9 +53,21 @@ def h_content(desc, p1, p2, p3, p4):
     		%s
     		</div>
     	</div>
+
+        <div class="row clearfix">
+    		<div class="col-md-12 column">
+    		%s
+    		</div>
+    	</div>
+    	
+        <div class="row clearfix">
+    		<div class="col-md-12 column">
+    		%s
+    		</div>
+    	</div>
     	
 	</div>
-    """ % (desc, p1, p2, p3, p4)
+    """ % (desc, p1, p2, p3, p4, p5, p6)
     
     return layout
 
@@ -148,7 +160,7 @@ def table(data, title, tdesc):
     return str(dtable)
 
     
-def my_table (file, file_path, title, tdesc):
+def my_table (file, file_path, title, tdesc, var_color):
     data = csv_readlist(file, file_path)
     dtable = HTML()
     dtable.h3(title)
@@ -214,9 +226,9 @@ def my_table (file, file_path, title, tdesc):
         r.td( str(i['cname']))
         if lp_change == "NA":
             r.td( str( lp_change ) +"%")
-        elif lp_change <= -1:
+        elif lp_change <= -var_color:
             r.td( str( lp_change ) +"%", bgcolor="#90EE90")
-        elif lp_change >= 0.5:
+        elif lp_change >= var_color/2:
             r.td( str( lp_change ) +"%", bgcolor="#DDA0DD")
         else:
             r.td( str( lp_change ) +"%")
@@ -295,19 +307,23 @@ def index_write():
     
     file_etf = "ETF_data.csv"
     file_rest = "rest_data.csv"
+    file_rest2 = "rest2_data.csv"
     file_path = '/srv/www/idehe.com/store2/data/'
     
     etf_data = sort_range(file_etf, file_path)
     rest_data = sort_range(file_rest, file_path)
+    rest2_data = sort_range(file_rest2, file_path)
     
     table_e = table(etf_data, '主要ETF', '1年价格排序/')
     table_r = table(rest_data, '其他', '1年价格排序/')
+    table_r2 = table(rest2_data, '备选', '1年价格排序/')
     
-    table_set_e = my_table(file_etf, file_path, '主要ETF', '数据处理/下跌1%上涨2%进行仓位操作')
-    table_set_r = my_table(file_rest, file_path, '其他', '数据处理/下跌1%上涨2%进行仓位操作')
+    table_set_e = my_table(file_etf, file_path, '主要ETF', '数据处理/下跌1%上涨2%进行仓位操作', 1.0)
+    table_set_r = my_table(file_rest, file_path, '其他', '数据处理/下跌0.5%上涨1%进行仓位操作', 0.5)
+    table_set_r2 = my_table(file_rest2, file_path, '备选', '数据处理/下跌0.5%上涨1%进行仓位操作', 0.5)
     
     desc = page_desciption()
-    content = h_content(desc, table_e, table_r, table_set_e, table_set_r)
+    content = h_content(desc, table_e, table_r, table_r2, table_set_e, table_set_r, table_set_r2)
     
     h = html(content)
     

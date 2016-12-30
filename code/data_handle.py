@@ -9,7 +9,7 @@ sys.setdefaultencoding('utf8')
 from csv_handle import csv_readlist, csv_writelist
 from xq_handle import data_get, select_data, data_get_index, select_data_index
 
-from google_data import data_filter, gfile_check
+#from google_data import data_filter, gfile_check
 
 def grab_data(ifile, file_path):
     # get online data and filter it
