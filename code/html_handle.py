@@ -21,7 +21,7 @@ def html(html_body):
     </html>""" % (html_body)
     return html_header
 
-def h_content(desc, p1, p2, p3, p4, p5, p6):
+def h_content(desc, p1, p2, p3, table_cash, p5, p6, p7):
     layout = """
     <div class="container">
         <div class="row clearfix">
@@ -65,9 +65,15 @@ def h_content(desc, p1, p2, p3, p4, p5, p6):
     		%s
     		</div>
     	</div>
+
+        <div class="row clearfix">
+    		<div class="col-md-12 column">
+    		%s
+    		</div>
+    	</div>
     	
 	</div>
-    """ % (desc, p1, p2, p3, p4, p5, p6)
+    """ % (desc, p1, p2, p3, table_cash, p5, p6, p7)
     
     return layout
 
@@ -120,6 +126,7 @@ def table_index(data, title, tdesc):
     return str(dtable)
     
 def table(data, title, tdesc):
+    ## table etf, rest, rest2
     dtable = HTML()
     dtable.h3(title)
     
@@ -159,8 +166,38 @@ def table(data, title, tdesc):
         r.td(str(i['disct']))
     return str(dtable)
 
+def cs_table (file, file_path, title, tdesc, total):
+    ## create table data
+    data = csv_readlist(file, file_path)
+    dtable = HTML()
+    dtable.h3(title)
     
-def my_table (file, file_path, title, tdesc, var_color):
+    desc = []
+    if tdesc !="":
+        desc = tdesc.split("/")
+    l = dtable.ol
+    for k in desc:
+        l.li(k)
+
+    t = dtable.table(border="0", width ="60%", klass ='table table-bordered')
+    
+    t.th('名称')
+    t.th('价值')
+    t.th('总资金')
+
+    for i in data:
+        #print (i)
+        nm = i['cname']
+        value = i['share']
+        r = t.tr
+        r.td( str(nm))
+        r.td( str(value))
+        r.td(str(total))
+        
+    return str(dtable)
+    
+    
+def my_table (file, file_path, title, tdesc, var_color, total):
     data = csv_readlist(file, file_path)
     dtable = HTML()
     dtable.h3(title)
@@ -181,6 +218,9 @@ def my_table (file, file_path, title, tdesc, var_color):
     t.th('盈亏')
     t.th('持仓价')
     t.th('现价')
+    t.th('份额')
+    t.th('市值')
+    t.th('仓位')
     t.th('100建仓价/0.5')
     t.th('98/1')
     t.th('96/1')
@@ -193,7 +233,14 @@ def my_table (file, file_path, title, tdesc, var_color):
     for i in data:
         
         cp = i['current_price']
+        if i['share'] == "":
+            share = 0.0
+        else:
+            share = float(i['share'])
+            
         cpf = float(filter(lambda ch: ch in '0123456789.', i['current_price']))
+        value = share * cpf
+        
         #print cpf
         if i['myprice'] == "":
             mp = 1000
@@ -235,8 +282,12 @@ def my_table (file, file_path, title, tdesc, var_color):
             
         r.td( str( lp ))
         r.td( str(mp_change) +"%" )
-        r.td( str( mp ) )
-        r.td.b( str( cp ) )
+        r.td( str( mp ) ) # my price
+        r.td.b( str( cp ) ) # current price
+        r.td( str( share ) ) # my price
+        r.td( str(value)) # my price
+        r.td( str(round(value/total*100,2))) # my price
+        
         if sl == 1000:
             r.td("NA")
             r.td("NA")
@@ -301,29 +352,55 @@ def sort_range_f5(lsdt):
         lsdt5.append(i)
     #lsdt.remove([5:-1])
     return lsdt5
-
+    
+    
+def value_total(file1, file2, file3, file4, file_path):
+    total = 0
+    read_file1 = csv_readlist(file1, file_path)
+    read_file2 = csv_readlist(file2, file_path)
+    read_file3 = csv_readlist(file3, file_path)
+    read_file4 = csv_readlist(file4, file_path)
+    file_list = [read_file1, read_file2, read_file3, read_file4]
+    
+    for j in file_list:
+        for i in j:
+            if i['share'] == "":
+                i['share'] = 0.0
+            else:
+                cpf = float(filter(lambda ch: ch in '0123456789.', i['current_price']))
+                total = total + float(i['share']) * cpf
+            print total
+    print total    
+    return total
+        
 def index_write():
     f = open('/srv/www/idehe.com/store2/index.html','w')
     
     file_etf = "ETF_data.csv"
     file_rest = "rest_data.csv"
     file_rest2 = "rest2_data.csv"
+    file_cash = 'cash.csv'
     file_path = '/srv/www/idehe.com/store2/data/'
+    
+    total = value_total(file_etf, file_rest, file_rest2, file_cash, file_path)
     
     etf_data = sort_range(file_etf, file_path)
     rest_data = sort_range(file_rest, file_path)
     rest2_data = sort_range(file_rest2, file_path)
     
+    ## data grab
     table_e = table(etf_data, '主要ETF', '1年价格排序/')
     table_r = table(rest_data, '其他', '1年价格排序/')
     table_r2 = table(rest2_data, '备选', '1年价格排序/')
     
-    table_set_e = my_table(file_etf, file_path, '主要ETF', '数据处理/下跌1%上涨2%进行仓位操作', 1.0)
-    table_set_r = my_table(file_rest, file_path, '其他', '数据处理/下跌0.5%上涨1%进行仓位操作', 0.5)
-    table_set_r2 = my_table(file_rest2, file_path, '备选', '数据处理/下跌0.5%上涨1%进行仓位操作', 0.5)
+    ## my share table
+    table_set_e = my_table(file_etf, file_path, '主要ETF', '数据处理/下跌1%上涨2%进行仓位操作', 1.0, total)
+    table_set_r = my_table(file_rest, file_path, '其他', '数据处理/下跌0.5%上涨1%进行仓位操作', 1.0, total)
+    table_set_r2 = my_table(file_rest2, file_path, '备选', '数据处理/下跌0.5%上涨1%进行仓位操作', 1.0, total)
+    table_cash = cs_table(file_cash, file_path, '现金和其他', '用于统计仓位', total)
     
     desc = page_desciption()
-    content = h_content(desc, table_e, table_r, table_r2, table_set_e, table_set_r, table_set_r2)
+    content = h_content(desc, table_e, table_r, table_r2, table_cash, table_set_e, table_set_r, table_set_r2)
     
     h = html(content)
     

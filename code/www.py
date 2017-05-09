@@ -1,5 +1,6 @@
 # -*- encoding:utf-8 -*-
 import flask
+from flask import Flask, render_template, request, redirect
 from csv_handle import csv_readlist, csv_writelist
 
 
@@ -37,9 +38,14 @@ html_txt = """
                                     <div class="form-group">
                                         <label for="name">last</label>
                                         <input type="text" name='last' class="form-control" placeholder="输入上次调仓价">
-                                    </div>                                    
+                                    </div>
                                     <div class="form-group">
-                                        <label for="name">last</label>
+                                        <label for="name">share</label>
+                                        <input type="text" name='share' class="form-control" placeholder="仓位">
+                                    </div> 
+                                
+                                    <div class="form-group">
+                                        <label for="name">setlow</label>
                                         <input type="text" name='setlow' class="form-control" placeholder="输入估算最低价">
                                     </div>  
                                     
@@ -78,7 +84,10 @@ def helo():
         sid = 'sid' in flask.request.form and flask.request.form['sid']
         myp = 'avg' in flask.request.form and flask.request.form['avg']
         lastp = 'last' in flask.request.form and flask.request.form['last']
+        share = 'share' in flask.request.form and flask.request.form['share']
+        
         setlow = 'setlow' in flask.request.form and flask.request.form['setlow']
+        
         file = 'file' in flask.request.form and flask.request.form['file']
         #print (myp + lastp)
         
@@ -91,6 +100,9 @@ def helo():
                 data_get['myprice'] = myp
             if lastp:
                 data_get['last_price'] = lastp
+            if share:
+                data_get['share'] = share
+                
             if setlow:
                 data_get['setlow'] = setlow
             
@@ -98,13 +110,13 @@ def helo():
             data_read = csv_readlist(file, "/srv/www/idehe.com/store2/data/")
             
             for i in data_read:
-                print i['SID']
+                #print i['SID']
                 if i['SID'] == data_get['SID']:
                     i.update(data_get)
-            for i in data_read:
-                print (i)
+            #for i in data_read:
+            #    print (i)
             csv_writelist(file, "/srv/www/idehe.com/store2/data/", data_read)
-            return 'updated!!'
+            return redirect('/')
         else:
             return "not good"
         

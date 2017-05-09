@@ -1,0 +1,436 @@
+ * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 401-975-160
+45.124.66.115 - - [01/Jan/2017 13:58:07] "GET / HTTP/1.1" 200 -
+45.124.66.115 - - [01/Jan/2017 13:58:22] "POST / HTTP/1.1" 200 -
+45.124.66.115 - - [01/Jan/2017 13:59:23] "GET / HTTP/1.1" 200 -
+ETF.csv
+{'setlow': u'1.38', 'SID': u'SZ162712'}
+SH510050
+SH510300
+SZ159915
+SH510900
+SH512000
+SH510880
+SH513030
+SH513500
+SZ161226
+SZ160216
+SZ162411
+SH502006
+SH501005
+SZ159939
+SH512680
+SH510230
+{'category': 'CN', 'last_price': '2.375', 'myprice': '2.348', 'setlow': '1.9', 'cname': '50ETF', 'disct': '', 'SID': 'SH510050'}
+{'category': 'CN', 'last_price': '3.342', 'myprice': '3.355', 'setlow': '2.81', 'cname': '300ETF', 'disct': '', 'SID': 'SH510300'}
+{'category': 'CN', 'last_price': '1.877', 'myprice': '1.933', 'setlow': '1.74', 'cname': '\xe5\x88\x9b\xe4\xb8\x9a\xe6\x9d\xbf', 'disct': '', 'SID': 'SZ159915'}
+{'category': 'CN', 'last_price': '1.047', 'myprice': '0.746', 'setlow': '0.8', 'cname': 'H\xe8\x82\xa1ETF', 'disct': '', 'SID': 'SH510900'}
+{'category': 'CN', 'last_price': '0.963', 'myprice': '0.988', 'setlow': '0.96', 'cname': '\xe5\x88\xb8\xe5\x95\x86ETF', 'disct': '', 'SID': 'SH512000'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '2.15', 'cname': '\xe7\xba\xa2\xe5\x88\xa9ETF', 'disct': '', 'SID': 'SH510880'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.81', 'cname': '\xe5\xbe\xb7\xe5\x9b\xbd30', 'disct': '', 'SID': 'SH513030'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '1.14', 'cname': '\xe6\xa0\x87\xe6\x99\xae500', 'disct': '', 'SID': 'SH513500'}
+{'category': 'CN', 'last_price': '0.963', 'myprice': '1.018', 'setlow': '0.9', 'cname': '\xe7\x99\xbd\xe9\x93\xb6\xe5\x9f\xba\xe9\x87\x91', 'disct': '', 'SID': 'SZ161226'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.34', 'cname': '\xe5\x9b\xbd\xe6\xb3\xb0\xe5\x95\x86\xe5\x93\x81', 'disct': '', 'SID': 'SZ160216'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.43', 'cname': '\xe5\x8d\x8e\xe5\xae\x9d\xe6\xb2\xb9\xe6\xb0\x94', 'disct': '', 'SID': 'SZ162411'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.56', 'cname': '\xe5\x9b\xbd\xe4\xbc\x81\xe6\x94\xb9\xe9\x9d\xa9', 'disct': '', 'SID': 'SH502006'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.93', 'cname': '\xe7\xb2\xbe\xe5\x87\x86\xe5\x8c\xbb\xe7\x96\x97', 'disct': '', 'SID': 'SH501005'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.97', 'cname': '\xe4\xbf\xa1\xe6\x81\xaf\xe6\x8a\x80\xe6\x9c\xaf', 'disct': '', 'SID': 'SZ159939'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.43', 'cname': '\xe5\x86\x9b\xe5\xb7\xa5\xe5\x9f\xba\xe9\x87\x91', 'disct': '', 'SID': 'SH512680'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '4.34', 'cname': '\xe9\x87\x91\xe8\x9e\x8dETF', 'disct': '', 'SID': 'SH510230'}
+ETF.csv
+{'setlow': u'1.38', 'SID': u'SZ162712'}
+SH510050
+SH510300
+SZ159915
+SH510900
+SH512000
+SH510880
+SH513030
+SH513500
+SZ161226
+SZ160216
+SZ162411
+SH502006
+SH501005
+SZ159939
+SH512680
+SH510230
+{'category': 'CN', 'last_price': '2.375', 'myprice': '2.348', 'setlow': '1.9', 'cname': '50ETF', 'disct': '', 'SID': 'SH510050'}
+{'category': 'CN', 'last_price': '3.342', 'myprice': '3.355', 'setlow': '2.81', 'cname': '300ETF', 'disct': '', 'SID': 'SH510300'}
+{'category': 'CN', 'last_price': '1.877', 'myprice': '1.933', 'setlow': '1.74', 'cname': '\xe5\x88\x9b\xe4\xb8\x9a\xe6\x9d\xbf', 'disct': '', 'SID': 'SZ159915'}
+{'category': 'CN', 'last_price': '1.047', 'myprice': '0.746', 'setlow': '0.8', 'cname': 'H\xe8\x82\xa1ETF', 'disct': '', 'SID': 'SH510900'}
+{'category': 'CN', 'last_price': '0.963', 'myprice': '0.988', 'setlow': '0.96', 'cname': '\xe5\x88\xb8\xe5\x95\x86ETF', 'disct': '', 'SID': 'SH512000'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '2.15', 'cname': '\xe7\xba\xa2\xe5\x88\xa9ETF', 'disct': '', 'SID': 'SH510880'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.81', 'cname': '\xe5\xbe\xb7\xe5\x9b\xbd30', 'disct': '', 'SID': 'SH513030'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '1.14', 'cname': '\xe6\xa0\x87\xe6\x99\xae500', 'disct': '', 'SID': 'SH513500'}
+{'category': 'CN', 'last_price': '0.963', 'myprice': '1.018', 'setlow': '0.9', 'cname': '\xe7\x99\xbd\xe9\x93\xb6\xe5\x9f\xba\xe9\x87\x91', 'dis45.124.66.115 - - [01/Jan/2017 13:59:59] "POST / HTTP/1.1" 200 -
+45.124.66.115 - - [01/Jan/2017 14:00:02] "GET / HTTP/1.1" 200 -
+45.124.66.115 - - [01/Jan/2017 14:00:18] "POST / HTTP/1.1" 200 -
+ * Detected change in '/srv/www/idehe.com/store2/code/www.py', reloading
+ct': '', 'SID': 'SZ161226'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.34', 'cname': '\xe5\x9b\xbd\xe6\xb3\xb0\xe5\x95\x86\xe5\x93\x81', 'disct': '', 'SID': 'SZ160216'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.43', 'cname': '\xe5\x8d\x8e\xe5\xae\x9d\xe6\xb2\xb9\xe6\xb0\x94', 'disct': '', 'SID': 'SZ162411'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.56', 'cname': '\xe5\x9b\xbd\xe4\xbc\x81\xe6\x94\xb9\xe9\x9d\xa9', 'disct': '', 'SID': 'SH502006'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.93', 'cname': '\xe7\xb2\xbe\xe5\x87\x86\xe5\x8c\xbb\xe7\x96\x97', 'disct': '', 'SID': 'SH501005'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.97', 'cname': '\xe4\xbf\xa1\xe6\x81\xaf\xe6\x8a\x80\xe6\x9c\xaf', 'disct': '', 'SID': 'SZ159939'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '0.43', 'cname': '\xe5\x86\x9b\xe5\xb7\xa5\xe5\x9f\xba\xe9\x87\x91', 'disct': '', 'SID': 'SH512680'}
+{'category': 'CN', 'last_price': '', 'myprice': '', 'setlow': '4.34', 'cname': '\xe9\x87\x91\xe8\x9e\x8dETF', 'disct': '', 'SID': 'SH510230'}
+rest.csv
+{'setlow': u'1.376', 'SID': u'SZ162712'}
+SZ163110
+SZ162712
+SZ163210
+SZ161019
+SZ161010
+SZ160515
+SZ164210
+SZ166902
+{'category': 'FD', 'last_price': '2.703', 'myprice': '2.665', 'setlow': '1.942', 'cname': '\xe7\x94\xb3\xe4\xb8\x87\xe9\x87\x8f\xe5\x8c\x96', 'disct': None, 'SID': 'SZ163110'}
+{'category': 'ZQ', 'last_price': '1.396', 'myprice': '1.449', 'setlow': u'1.376', 'cname': '\xe5\xb9\xbf\xe5\x8f\x91\xe8\x81\x9a\xe5\x88\xa9', 'disct': None, 'SID': u'SZ162712'}
+{'category': 'ZQ', 'last_price': '1.043', 'myprice': '1.032', 'setlow': '0.996', 'cname': '\xe8\xaf\xba\xe5\xae\x89\xe7\xba\xaf\xe5\x80\xba', 'disct': None, 'SID': 'SZ163210'}
+{'category': 'ZQ', 'last_price': '0.986', 'myprice': '0.992', 'setlow': '0.968', 'cname': '\xe5\xaf\x8c\xe5\x9b\xbd\xe5\xa4\xa9\xe9\x94\x8b', 'disct': None, 'SID': 'SZ161019'}
+{'category': 'ZQ', 'last_price': '1.053', 'myprice': '1.074', 'setlow': '1.049', 'cname': '\xe5\xaf\x8c\xe5\x9b\xbd\xe5\xa4\xa9\xe4\xb8\xb0', 'disct': None, 'SID': 'SZ161010'}
+{'category': 'ZQ', 'last_price': '1.035', 'myprice': '1.036', 'setlow': '0.967', 'cname': '\xe5\xae\x89\xe4\xb8\xb018', 'disct': None, 'SID': 'SZ160515'}
+{'category': 'ZQ', 'last_price': '1.009', 'myprice': '1.01', 'setlow': '0.98', 'cname': '\xe5\xa4\xa9\xe5\x88\xa9\xe5\x90\x8c\xe5\xbc\x98', 'disct': None, 'SID': 'SZ164210'}
+{'category': 'ZQ', 'last_price': '1.035', 'myprice': '1.05', 'setlow': '1.013', 'cname': '\xe6\xb0\x91\xe7\x94\x9f\xe5\xa2\x9e\xe5\x88\xa9', 'disct': None, 'SID': 'SZ166902'}
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 401-975-160
+ * Detected change in '/srv/www/idehe.com/store2/code/www.py', reloading
+ * Restarting with stat
+  File "www.py", line 107
+    return redirect'/')
+                     ^
+SyntaxError: invalid syntax
+ * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 401-975-160
+45.124.66.115 - - [02/Jan/2017 00:54:36] "GET / HTTP/1.1" 200 -
+45.124.66.115 - - [02/Jan/2017 00:54:37] "GET /favicon.ico HTTP/1.1" 404 -
+211.147.112.133 - - [02/Jan/2017 01:17:21] "GET /manager/html HTTP/1.1" 404 -
+123.59.70.63 - - [02/Jan/2017 01:37:32] "GET http://www.baidu.com/favicon.ico HTTP/1.1" 404 -
+211.147.112.133 - - [02/Jan/2017 01:39:33] "GET /manager/html HTTP/1.1" 404 -
+93.174.93.142 - - [02/Jan/2017 05:19:22] "GET / HTTP/1.0" 200 -
+93.174.93.136 - - [02/Jan/2017 06:29:28] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 -
+185.49.14.190 - - [02/Jan/2017 07:18:42] "GET http://testp4.pospr.waw.pl/testproxy.php HTTP/1.1" 404 -
+58.221.44.9 - - [02/Jan/2017 17:50:03] "GET / HTTP/1.1" 200 -
+94.102.49.174 - - [02/Jan/2017 18:40:54] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 -
+185.25.148.240 - - [02/Jan/2017 19:51:19] "GET http://testp4.pospr.waw.pl/testproxy.php HTTP/1.1" 404 -
+112.97.57.43 - - [02/Jan/2017 21:28:53] "GET / HTTP/1.1" 200 -
+112.97.57.43 - - [02/Jan/2017 21:28:54] "GET /favicon.ico HTTP/1.1" 404 -
+112.97.57.43 - - [02/Jan/2017 21:29:29] "POST / HTTP/1.1" 302 -
+112.97.57.43 - - [02/Jan/2017 21:29:30] "GET / HTTP/1.1" 200 -
+112.97.57.43 - - [02/Jan/2017 21:41:28] "GET /favicon.ico HTTP/1.1" 404 -
+rest.csv
+{'last_price': u'1.064', 'myprice': u'1.076', 'SID': u'SZ161010'}
+SZ163110
+SZ162712
+SZ163210
+SZ161019
+SZ161010
+SZ160515
+SZ164210
+SZ166902
+ * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 401-975-160
+45.124.66.115 - - [04/Jan/2017 01:23:09] "GET / HTTP/1.1" 200 -
+45.124.66.115 - - [04/Jan/2017 01:23:10] "GET /favicon.ico HTTP/1.1" 404 -
+45.124.66.115 - - [04/Jan/2017 01:23:26] "POST / HTTP/1.1" 302 -
+45.124.66.115 - - [04/Jan/2017 01:23:27] "GET / HTTP/1.1" 200 -
+ * Detected change in '/srv/www/idehe.com/store2/code/www.py', reloading
+ETF.csv
+{'last_price': u'0.983', 'myprice': u'0.997', 'SID': u'SH512000'}
+SH510050
+SH510300
+SZ159915
+SH510900
+SH512000
+SH510880
+SH513030
+SH513500
+SZ161226
+SZ160216
+SZ162411
+SH502006
+SH501005
+SZ159939
+SH512680
+SH510230
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 401-975-160
+45.124.66.115 - - [04/Jan/2017 01:24:38] "GET / HTTP/1.1" 200 -
+45.124.66.115 - - [04/Jan/2017 01:24:39] "GET /favicon.ico HTTP/1.1" 404 -
+61.157.96.112 - - [04/Jan/2017 04:07:51] "GET http://www.baidu.com/?rands=_1064117325025086604276104 HTTP/1.0" 200 -
+61.157.96.112 - - [04/Jan/2017 04:07:52] "GET http://www.ip.cn/?rands=_775615653622125601903276 HTTP/1.0" 200 -
+61.157.96.112 - - [04/Jan/2017 04:08:00] "GET http://m.sogou.com/?rands=_929613134003506328850680 HTTP/1.0" 200 -
+222.186.34.119 - - [04/Jan/2017 06:01:40] "GET /script HTTP/1.1" 404 -
+185.110.132.231 - - [04/Jan/2017 09:01:05] "GET / HTTP/1.1" 200 -
+185.49.14.190 - - [04/Jan/2017 10:19:56] "GET http://testp1.piwo.pila.pl/testproxy.php HTTP/1.1" 404 -
+94.102.49.174 - - [04/Jan/2017 10:44:10] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 -
+123.59.70.63 - - [04/Jan/2017 11:40:11] "GET http://www.baidu.com/favicon.ico HTTP/1.1" 404 -
+180.97.106.161 - - [04/Jan/2017 12:41:05] "HEAD http://180.163.113.82/check_proxy HTTP/1.1" 404 -
+93.174.93.136 - - [04/Jan/2017 15:04:44] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 -
+180.97.106.37 - - [04/Jan/2017 19:15:11] code 400, message Bad request syntax ('\x04\x01\x00P\xb4\xa3qR\x00')
+180.97.106.37 - - [04/Jan/2017 19:15:11] " P´£qR " 400 -
+180.97.106.37 - - [04/Jan/2017 19:46:09] code 400, message Bad request syntax ('\x05\x02\x00\x02')
+180.97.106.37 - - [04/Jan/2017 19:46:09] " " 400 -
+185.110.132.231 - - [04/Jan/2017 20:33:48] "GET / HTTP/1.1" 200 -
+185.25.148.240 - - [04/Jan/2017 22:47:15] "GET http://testp1.piwo.pila.pl/testproxy.php HTTP/1.1" 404 -
+198.20.69.74 - - [04/Jan/2017 23:03:52] "GET / HTTP/1.1" 200 -
+198.20.69.74 - - [04/Jan/2017 23:03:52] "GET /robots.txt HTTP/1.1" 404 -
+198.20.69.74 - - [04/Jan/2017 23:03:52] "GET /sitemap.xml HTTP/1.1" 404 -
+45.124.66.115 - - [05/Jan/2017 00:06:40] "GET / HTTP/1.1" 200 -
+45.124.66.115 - - [05/Jan/2017 00:06:41] "GET /favicon.ico HTTP/1.1" 404 -
+45.124.66.115 - - [05/Jan/2017 00:07:06] "POST / HTTP/1.1" 302 -
+45.124.66.115 - - [05/Jan/2017 00:07:06] "GET / HTTP/1.1" 200 -
+120.132.49.91 - - [05/Jan/2017 01:24:00] "GET http://www.baidu.com/favicon.ico HTTP/1.1" 404 -
+71.43.7.58 - - [05/Jan/2017 05:57:24] "GET / HTTP/1.0" 200 -
+185.25.148.240 - - [05/Jan/2017 12:36:18] "GET http://testp1.piwo.pila.pl/testproxy.php HTTP/1.1" 404 -
+139.162.45.31 - - [05/Jan/2017 16:45:41] "GET / HTTP/1.1" 200 -
+93.174.93.136 - - [05/Jan/2017 19:22:12] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 -
+107.182.186.5 - - [06/Jan/2017 00:52:06] "GET / HTTP/1.1" 200 -
+107.182.186.5 - - [06/Jan/2017 00:52:07] "GET /favicon.ico HTTP/1.1" 404 -
+107.182.186.5 - - [06/Jan/2017 00:52:25] "POST / HTTP/1.1" 302 -
+107.182.186.5 - - [06/Jan/2017 00:52:26] "GET / HTTP/1.1" 200 -
+94.102.49.174 - - [06/Jan/2017 02:43:03] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 -
+123.59.82.147 - - [06/Jan/2017 02:54:17] "GET http://www.baidu.com/favicon.ico HTTP/1.1" 404 -
+185.25.148.240 - - [06/Jan/2017 03:12:08] "GET http://testp1.piwo.pila.pl/testproxy.php HTTP/1.1" 404 -
+198.20.69.74 - - [06/Jan/2017 03:17:31] "GET / HTTP/1.1" 200 -
+198.20.69.74 - - [06/Jan/2017 03:17:31] "GET /robots.txt HTTP/1.1" 404 -
+198.20.69.74 - - [06/Jan/2017 03:17:31] "GET /sitemap.xml HTTP/1.1" 404 -
+189.7.250.226 - - [06/Jan/2017 04:55:56] "GET /cgi/common.cgi HTTP/1.0" 404 -
+189.7.250.226 - - [06/Jan/2017 04:55:56] "GET /stssys.htm HTTP/1.0" 404 -
+189.7.250.226 - - [06/Jan/2017 04:55:56] "GET / HTTP/1.0" 200 -
+189.7.250.226 - - [06/Jan/2017 04:55:57] "POST /command.php HTTP/1.0" 404 -
+189.7.250.226 - - [06/Jan/2017 04:55:57] "GET /language/Swedish${IFS}&&echo${IFS}610cker>qt&&tar${IFS}/string.js HTTP/1.0" 404 -
+189.7.250.226 - - [06/Jan/2017 04:55:58] "GET /../../../../../../../mnt/mtd/qt HTTP/1.0" 404 -
+120.132.49.91 - - [06/Jan/2017 12:33:13] "GET http://www.baidu.com/favicon.ico HTTP/1.1" 404 -
+169.54.233.123 - - [06/Jan/2017 13:55:12] "GET / HTTP/1.0" 200 -
+185.49.14.190 - - [06/Jan/2017 16:43:00] "GET http://testp4.pospr.waw.pl/testproxy.php HTTP/1.1" 404 -
+61.157.96.112 - - [06/Jan/2017 23:03:38] "GET http://www.ip.cn/?rands=_60769035004184253461920 HTTP/1.0" 200 -
+61.157.96.112 - - [06/Jan/2017 23:03:40] "GET http://m.sogou.com/?rands=_228555156509813963553616 HTTP/1.0" 200 -
+61.157.96.112 - - [06/Jan/2017 23:03:44] "GET http://www.baidu.com/?rands=_570537756811371774236696 HTTP/1.0" 200 -
+93.174.93.136 - - [06/Jan/2017 23:39:23] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 -
+95.25.52.82 - - [06/Jan/2017 23:56:20] "GET http://t17.proxy-checks.com/favicon.ico HTTP/1.1" 404 -
+95.25.52.82 - - [06/Jan/2017 23:56:20] "GET http://104.156.57.169/favicon.ico HTTP/1.1" 404 -
+95.25.52.82 - - [06/Jan/2017 23:56:20] "CONNECT t10.proxy-checks.com:443 HTTP/1.1" 404 -
+95.25.52.82 - - [06/Jan/2017 23:56:21] "CONNECT 37.235.53.161:443 HTTP/1.1" 404 -
+95.25.52.82 - - [06/Jan/2017 23:56:21] "POST http://t15.proxy-checks.com/favicon.ico HTTP/1.1" 404 -
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 659, in inner
+    srv.serve_forever()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 499, in serve_forever
+    HTTPServer.serve_forever(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 238, in serve_forever
+    self._handle_request_noblock()
+  File "/usr/lib/python2.7/SocketServer.py", line 297, in _handle_request_noblock
+    self.handle_error(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 655, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 216, in handle
+    rv = BaseHTTPRequestHandler.handle(self)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 247, in handle_one_request
+    self.raw_requestline = self.rfile.readline()
+IOError: [Errno 104] Connection reset by peer
+
+ETF.csv
+{'last_price': u'1.067', 'myprice': u'0.645', 'SID': u'SH510900'}
+SH510050
+SH510300
+SZ159915
+SH510900
+SH512000
+SH510880
+SH513030
+SH513500
+SZ161226
+SZ160216
+SZ162411
+SH502006
+SH501005
+SZ159939
+SH512680
+SH510230
+ETF.csv
+{'last_price': u'0.971', 'myprice': u'0.982', 'SID': u'SH512000'}
+SH510050
+SH510300
+SZ159915
+SH510900
+SH512000
+SH510880
+SH513030
+SH513500
+SZ161226
+SZ160216
+SZ162411
+SH502006
+SH501005
+SZ159939
+SH512680
+SH510230
+ * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 401-975-160
+104.238.150.79 - - [10/Jan/2017 01:52:31] "GET / HTTP/1.1" 200 -
+104.238.150.79 - - [10/Jan/2017 01:52:32] "GET /favicon.ico HTTP/1.1" 404 -
+104.238.150.79 - - [10/Jan/2017 01:53:03] "POST / HTTP/1.1" 302 -
+104.238.150.79 - - [10/Jan/2017 01:53:04] "GET / HTTP/1.1" 200 -
+222.186.31.89 - - [10/Jan/2017 02:11:05] "GET /manager/html HTTP/1.1" 404 -
+198.20.69.74 - - [10/Jan/2017 05:08:46] "GET / HTTP/1.1" 200 -
+198.20.69.74 - - [10/Jan/2017 05:08:46] "GET /robots.txt HTTP/1.1" 404 -
+198.20.69.74 - - [10/Jan/2017 05:08:46] "GET /sitemap.xml HTTP/1.1" 404 -
+146.0.228.110 - - [10/Jan/2017 06:00:34] "GET /recordings/LICENSE.txt HTTP/1.1" 404 -
+91.196.50.33 - - [10/Jan/2017 06:22:19] "GET http://testp4.pospr.waw.pl/testproxy.php HTTP/1.1" 404 -
+192.40.95.8 - - [10/Jan/2017 08:51:24] "GET / HTTP/1.1" 200 -
+115.231.217.46 - - [10/Jan/2017 12:03:17] "CONNECT search.yahoo.com:443 HTTP/1.1" 404 -
+185.169.229.60 - - [10/Jan/2017 17:25:43] "GET /login.asp HTTP/1.0" 404 -
+91.196.50.33 - - [10/Jan/2017 18:32:45] "GET http://testp1.piwo.pila.pl/testproxy.php HTTP/1.1" 404 -
+85.204.97.242 - - [10/Jan/2017 18:45:52] "HEAD / HTTP/1.0" 200 -
+59.63.64.39 - - [10/Jan/2017 19:26:53] "CONNECT search.yahoo.com:443 HTTP/1.1" 404 -
+59.63.84.69 - - [10/Jan/2017 20:02:23] "CONNECT search.yahoo.com:443 HTTP/1.1" 404 -
+177.141.56.37 - - [10/Jan/2017 20:10:22] "GET / HTTP/1.0" 200 -
+180.150.187.149 - - [10/Jan/2017 20:14:01] "GET http://www.baidu.com/favicon.ico HTTP/1.1" 404 -
+111.198.173.64 - - [10/Jan/2017 22:29:16] "CONNECT search.yahoo.com:443 HTTP/1.1" 404 -
+45.78.3.232 - - [11/Jan/2017 00:54:41] "GET / HTTP/1.1" 200 -
+45.78.3.232 - - [11/Jan/2017 00:54:42] "GET /favicon.ico HTTP/1.1" 404 -
+45.78.3.232 - - [11/Jan/2017 00:55:00] "POST / HTTP/1.1" 302 -
+45.78.3.232 - - [11/Jan/2017 00:55:01] "GET / HTTP/1.1" 200 -
+117.21.191.2 - - [11/Jan/2017 01:28:17] "GET /manager/html HTTP/1.1" 404 -
+117.21.191.2 - - [11/Jan/2017 01:32:48] "GET /manager/html HTTP/1.1" 404 -
+5.89.78.208 - - [11/Jan/2017 01:49:16] "GET / HTTP/1.1" 200 -
+94.102.49.174 - - [11/Jan/2017 02:32:51] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 -
+60.191.38.77 - - [11/Jan/2017 04:29:45] "GET / HTTP/1.1" 200 -
+139.162.45.31 - - [11/Jan/2017 05:03:27] "GET http://clientapi.ipip.net/echo.php?info=20170111180322 HTTP/1.1" 404 -
+139.162.45.31 - - [11/Jan/2017 05:03:52] code 400, message Bad request syntax ('\x04\x01\x1f\x00\x00\x00\x00\x00\x00')
+139.162.45.31 - - [11/Jan/2017 05:03:52] "      " 400 -
+103.37.146.216 - - [11/Jan/2017 06:07:20] "GET http://www.baidu.com/favicon.ico HTTP/1.1" 404 -
+185.169.229.60 - - [11/Jan/2017 06:44:32] "GET / HTTP/1.0" 200 -
+91.196.50.33 - - [11/Jan/2017 06:59:49] "GET http://testp3.pospr.waw.pl/testproxy.php HTTP/1.1" 404 -
+112.97.61.87 - - [11/Jan/2017 09:01:12] "GET / HTTP/1.1" 200 -
+112.97.61.87 - - [11/Jan/2017 09:01:13] "GET /favicon.ico HTTP/1.1" 404 -
+112.97.61.87 - - [11/Jan/2017 09:01:55] "POST / HTTP/1.1" 302 -
+112.97.61.87 - - [11/Jan/2017 09:01:56] "GET / HTTP/1.1" 200 -
+61.157.96.112 - - [11/Jan/2017 09:39:19] "GET http://www.ip.cn/?rands=_1142452317227199202878000 HTTP/1.0" 200 -
+61.157.96.112 - - [11/Jan/2017 09:39:20] "GET http://www.baidu.com/?rands=_1393756047220778241143360 HTTP/1.0" 200 -
+61.157.96.112 - - [11/Jan/2017 09:39:22] "GET http://m.sogou.com/?rands=_13775141870498762208992 HTTP/1.0" 200 -
+185.110.132.231 - - [11/Jan/2017 12:29:08] "GET / HTTP/1.1" 200 -
+180.97.106.37 - - [11/Jan/2017 12:45:54] "HEAD http://180.163.113.82/check_proxy HTTP/1.1" 404 -
+61.164.149.128 - - [11/Jan/2017 12:57:50] "GET http://www.server110.com/ HTTP/1.1" 200 -
+61.164.149.128 - - [11/Jan/2017 12:57:50] "CONNECT www.linode.com:443 HTTP/1.1" 404 -
+61.164.149.128 - - [11/Jan/2017 12:57:50] "CONNECT www.linode.com:443 HTTP/1.1" 404 -
+61.164.149.128 - - [11/Jan/2017 12:57:52] "CONNECT www.linode.com:443 HTTP/1.1" 404 -
+112.97.63.80 - - [11/Jan/2017 13:17:43] "GET /favicon.ico HTTP/1.1" 404 -
+59.4.218.71 - - [11/Jan/2017 13:58:32] "HEAD / HTTP/1.1" 200 -
+59.4.218.71 - - [11/Jan/2017 13:58:33] "GET / HTTP/1.1" 200 -
+59.4.218.71 - - [11/Jan/2017 13:58:35] "HEAD /invoker/EJBInvokerServlet HTTP/1.1" 404 -
+123.59.82.147 - - [11/Jan/2017 14:07:15] "GET http://www.baidu.com/favicon.ico HTTP/1.1" 404 -
+61.157.96.112 - - [11/Jan/2017 15:44:37] "GET http://www.baidu.com/?rands=_2442335682595656221640 HTTP/1.0" 200 -
+61.157.96.112 - - [11/Jan/2017 15:44:37] "GET http://m.sogou.com/?rands=_1796813403885784962674676 HTTP/1.0" 200 -
+61.157.96.112 - - [11/Jan/2017 15:44:39] "GET http://www.ip.cn/?rands=_69447228003825603225880 HTTP/1.0" 200 -
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 659, in inner
+    srv.serve_forever()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 499, in serve_forever
+    HTTPServer.serve_forever(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 238, in serve_forever
+    self._handle_request_noblock()
+  File "/usr/lib/python2.7/SocketServer.py", line 297, in _handle_request_noblock
+    self.handle_error(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 655, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 216, in handle
+    rv = BaseHTTPRequestHandler.handle(self)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 247, in handle_one_request
+    self.raw_requestline = self.rfile.readline()
+IOError: [Errno 104] Connection reset by peer
+
+Traceback (most recent call last):
+  File "www.py", line 114, in <module>
+    app.run(debug=True, host='0.0.0.0', port=8080)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 843, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 677, in run_simple
+    s.bind((hostname, port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+rest.csv
+{'last_price': u'1.074', 'myprice': u'1.077', 'SID': u'SZ161010'}
+SZ163110
+SZ162712
+SZ163210
+SZ161019
+SZ161010
+SZ160515
+SZ164210
+SZ166902
+ETF.csv
+{'last_price': u'0.981', 'myprice': u'1.053', 'SID': u'SZ161226'}
+SH510050
+SH510300
+SZ159915
+SH510900
+SH512000
+SH510880
+SH513030
+SH513500
+SZ161226
+SZ160216
+SZ162411
+SH502006
+SH501005
+SZ159939
+SH512680
+SH510230
+ETF.csv
+{'last_price': u'1.858', 'myprice': u'1.917', 'SID': u'SZ159915'}
+SH510050
+SH510300
+SZ159915
+SH510900
+SH512000
+SH510880
+SH513030
+SH513500
+SZ161226
+SZ160216
+SZ162411
+SH502006
+SH501005
+SZ159939
+SH512680
+SH510230
