@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 from urllib2 import urlopen
 import string
 
-def raw_data(sid, url_prefix):
+def xq_raw_data(sid, url_prefix):
     url = url_prefix+sid
     cj = cookielib.CookieJar()
     opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
@@ -21,10 +21,10 @@ def raw_data(sid, url_prefix):
     content = quote.read()
     return content
 
-def data_get(sid):
+def xq_data_A(sid):
     url_prefix = "https://xueqiu.com/S/"
     # filter table td data from raw by soup
-    rawdata = raw_data(sid, url_prefix)
+    rawdata = xq_raw_data(sid, url_prefix)
     soup = BeautifulSoup(rawdata, 'lxml')
     #toptable all td
     toptable = soup.find('table', class_="topTable")
@@ -44,8 +44,8 @@ def data_get(sid):
     sid_dict['current_price'] = cu_price
     return sid_dict
     
-def select_data(sdict):
-    # english data and select data
+def xq_data_A_filter(sdict):
+    # 52KH, 52KL, current price, volumn, today_open
     e_data = {}
     e_data['52KH'] = sdict[u'52\u5468\u6700\u9ad8\uff1a'].encode()
     e_data['52KL'] = sdict[u'52\u5468\u6700\u4f4e\uff1a'].encode()
@@ -63,10 +63,11 @@ def select_data(sdict):
     e_data['30avg'] = sdict[u'30\u65e5\u5747\u91cf\uff1a']
     return e_data
 
-def data_get_index(sid):
+def xq_data_index_bond(sid):
+    # Data get for index
     url_prefix = "https://xueqiu.com/S/"
     # filter table td data from raw by soup
-    rawdata = raw_data(sid, url_prefix)
+    rawdata = xq_raw_data(sid, url_prefix)
     soup = BeautifulSoup(rawdata, 'lxml')
     #toptable all td
     toptable = soup.find_all('div', class_="wrapper")
@@ -90,8 +91,15 @@ def data_get_index(sid):
     sid_dict['current_price'] = cu_price
     #print sid_dict
     return sid_dict
+    
+def xq_data_bond_filter(sdict):
+    # english data and select data
+    bond_data = {}
+    bond_data['current_price'] = sdict['current_price']
+    bond_data['full_price'] = sdict[u'\u5168\u4ef7(\u5143)\uff1a'].encode()
+    return bond_data    
 
-def select_data_index(sdict):
+def xq_data_index_filter(sdict):
     # english data and select data
     e_data = {}
     e_data['52KH'] = sdict[u'52\u5468\u6700\u9ad8\uff1a'].encode()
@@ -112,19 +120,26 @@ def select_data_index(sdict):
         e_data['30avg'] = '0%'
     return e_data
 
+
     
     
 if __name__ == "__main__":
-    sid2 = "SZ399001" # guotai xiaopan
-    sid = "SZ162712"
-    #raw_data = raw_data(url)
     
-    sid_dict = data_get(sid)
-    #print sid_dict
-    print select_data(sid_dict)
+    #bond
+    sid_bond = "SH124161" # 13瑞水泥 bond
+    #sid_dict_bond = xq_data_index_bond(sid_bond)
+    #print xq_data_bond_filter(sid_dict_bond)
     
-    #sid_dict_index = data_get_index(sid2)
-    #print select_data_index(sid_dict_index)
+    
+    #A
+    sid_A = "SZ164105" # 华富强债 A
+    sid_dict = xq_data_A(sid_A)
+    print xq_data_A_filter(sid_dict)
+    
+    #index
+    sid_index = "SZ399001" # 深圳成指 index
+    #sid_dict_index = xq_data_index(sid_index)
+    #print xq_data_index_filter(sid_dict_index)
     
     
     

@@ -376,17 +376,20 @@ def value_total(file1, file2, file3, file4, file_path):
 def index_write():
     f = open('/srv/www/idehe.com/store2/index.html','w')
     
+    #
     file_etf = "ETF_data.csv"
     file_rest = "rest_data.csv"
     file_rest2 = "rest2_data.csv"
-    file_cash = 'cash.csv'
-    file_path = '/srv/www/idehe.com/store2/data/'
+    file_cash = 'cash_data.csv'
     
-    total = value_total(file_etf, file_rest, file_rest2, file_cash, file_path)
+    ifile_path = '/srv/www/idehe.com/store2/data/'
+    ofile_path = '/srv/www/idehe.com/store2/data_output/'
     
-    etf_data = sort_range(file_etf, file_path)
-    rest_data = sort_range(file_rest, file_path)
-    rest2_data = sort_range(file_rest2, file_path)
+    total = value_total(file_etf, file_rest, file_rest2, file_cash, ofile_path)
+    
+    etf_data = sort_range(file_etf, ofile_path)
+    rest_data = sort_range(file_rest, ofile_path)
+    rest2_data = sort_range(file_rest2, ofile_path)
     
     ## data grab
     table_e = table(etf_data, '主要ETF', '1年价格排序/')
@@ -394,10 +397,10 @@ def index_write():
     table_r2 = table(rest2_data, '备选', '1年价格排序/')
     
     ## my share table
-    table_set_e = my_table(file_etf, file_path, '主要ETF', '数据处理/下跌1%上涨2%进行仓位操作', 1.0, total)
-    table_set_r = my_table(file_rest, file_path, '其他', '数据处理/下跌0.5%上涨1%进行仓位操作', 1.0, total)
-    table_set_r2 = my_table(file_rest2, file_path, '备选', '数据处理/下跌0.5%上涨1%进行仓位操作', 1.0, total)
-    table_cash = cs_table(file_cash, file_path, '现金和其他', '用于统计仓位', total)
+    table_set_e = my_table(file_etf, ofile_path, '主要ETF', '数据处理/下跌1%上涨2%进行仓位操作', 1.0, total)
+    table_set_r = my_table(file_rest, ofile_path, '其他', '数据处理/下跌0.5%上涨1%进行仓位操作', 1.0, total)
+    table_set_r2 = my_table(file_rest2, ofile_path, '备选', '数据处理/下跌0.5%上涨1%进行仓位操作', 1.0, total)
+    table_cash = cs_table(file_cash, ofile_path, '现金和其他', '用于统计仓位', total)
     
     desc = page_desciption()
     content = h_content(desc, table_e, table_r, table_r2, table_cash, table_set_e, table_set_r, table_set_r2)

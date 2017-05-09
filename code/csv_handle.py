@@ -1,6 +1,7 @@
 import csv
 
 def csv_readlist(file, file_path):
+    ## csv read as list
     csv_list = []
     full_path = file_path + file
     with open(full_path) as f:
@@ -10,6 +11,7 @@ def csv_readlist(file, file_path):
     return csv_list
 
 def csv_writelist(file, file_path, data):
+    ## csv write list
     full_path = file_path + file
     field = data[0].keys()
     
