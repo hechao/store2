@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, redirect
 from csv_handle import csv_readlist, csv_writelist
 
 
-html_txt = """
+stock_txt = """
 <!DOCTYPE html>
 <html>
     <head>
@@ -72,14 +72,62 @@ html_txt = """
 </html>
 """
 
+cash_txt = """
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update stock info!</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+    <div class="container">
+    	<div class="row clearfix">
+    		<div class="col-md-12 column">
+    			<div class="jumbotron">
+    				<h1>
+    					修改现金！
+    				</h1>
+    				<p>
+    					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+    				</p>
+                    <form class="form-inline", method = 'post', role="form">
+                            <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="name">SID</label>
+                                        <input type="text" name='cash' class="form-control" placeholder="输入现金变更">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="name">average</label>
+                                        <input type="text" name='bond' class="form-control" placeholder="输入债券">
+                                    
+                                    </div>
+                            </p>
+                            <button type="submit" class="btn btn-default">提交</button>
+                            </div>        
+                    </form>
+    				</p>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    </body>
+</html>
+"""
+
+
 app = flask.Flask(__name__)
 
 @app.route('/', methods = ['GET', 'POST'])
-#@app.route('/')
 
-def helo():
+#
+
+def stock():
     if flask.request.method == 'GET':
-        return html_txt
+        return stock_txt
     else:
         sid = 'sid' in flask.request.form and flask.request.form['sid']
         myp = 'avg' in flask.request.form and flask.request.form['avg']
@@ -105,24 +153,48 @@ def helo():
                 
             if setlow:
                 data_get['setlow'] = setlow
+                
+            ## what data got in list
+            print (data_get) 
             
-            print (data_get)
+            # read data file
             data_read = csv_readlist(file, "/srv/www/idehe.com/store2/data/")
             
+            ## update 
             for i in data_read:
-                #print i['SID']
                 if i['SID'] == data_get['SID']:
                     i.update(data_get)
-            #for i in data_read:
-            #    print (i)
+                    
+            #save into file
             csv_writelist(file, "/srv/www/idehe.com/store2/data/", data_read)
             return redirect('/')
         else:
             return "not good"
         
+@app.route('/cash', methods = ['GET', 'POST'])
+def cash():
+    if flask.request.method == 'GET':
+        return cash_txt
+
+    else:
+        cash = 'cash' in flask.request.form and flask.request.form['cash']
+        bond = 'bond' in flask.request.form and flask.request.form['bond']
+
+        data_read = csv_readlist("cash_data.csv", "/srv/www/idehe.com/store2/data_output/")        
+        if cash:
+            data_read[0]['share'] = float(data_read[0]['share']) + float(cash)
+        if bond:
+            data_read[1]['share'] = float(data_read[1]['share']) + float(bond)
+            
+        print data_read
+        csv_writelist("cash_data.csv", "/srv/www/idehe.com/store2/data_output/", data_read)
+        
+        return redirect('/cash')
+        
+
 if __name__ == '__main__':
     #app.run(debug=True, host='0.0.0.0', port=8080)
-    app.run(debug=True, host='0.0.0.0', port=8080)
+    app.run(debug=True, host='0.0.0.0', port=18080)
     
     
     
